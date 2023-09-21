@@ -14,12 +14,12 @@ def render_frame(x,y):
     clear_canvas_now()
     grass.draw_now(400, 30)
     character.draw_now(x, y)
-    delay(0.02)
+    delay(0.01)
     
 def run_circle():
     print('Circle')
     cx, cy, r = 400, 300, 200
-    for deg in range(0, 360, 1):
+    for deg in range(90, 450, 1):
         x = cx + r * math.cos(math.radians(deg))
         y = cy + r * math.sin(math.radians(deg))
         render_frame(x,y)
@@ -43,7 +43,7 @@ def run_rectangle():
 
 
 while True:
-    run_rectangle()
+    #run_rectangle()
     run_circle()
      
 
